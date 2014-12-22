@@ -1210,7 +1210,6 @@
     
 }
 - (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didSelectedPhotoAtIndex:(NSUInteger)selectedPhotoIndex {
-    NSLog(@"Photo tapped at index %lu",(unsigned long)selectedPhotoIndex);
 }
 @end
 
