@@ -1662,4 +1662,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+- (void)singleTapOnCurrentPhoto {
+    if (_displayPlayButton) {
+        if(self.delegate && [self.delegate respondsToSelector:@selector(photoBrowser:didSelectedPhotoAtIndex:)]) {
+            [self.delegate photoBrowser:self didSelectedPhotoAtIndex:self.currentIndex];
+        }
+    }
+}
+
 @end

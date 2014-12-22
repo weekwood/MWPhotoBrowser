@@ -1209,6 +1209,7 @@
     });
     
 }
-
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didSelectedPhotoAtIndex:(NSUInteger)selectedPhotoIndex {
+}
 @end
 

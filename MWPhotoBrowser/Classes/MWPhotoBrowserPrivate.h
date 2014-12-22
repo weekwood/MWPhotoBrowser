@@ -131,6 +131,5 @@
 - (void)savePhoto;
 - (void)copyPhoto;
 - (void)emailPhoto;
-
 @end
 
