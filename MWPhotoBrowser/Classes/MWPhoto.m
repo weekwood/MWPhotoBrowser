@@ -43,6 +43,10 @@
 	return [[MWPhoto alloc] initWithURL:url];
 }
 
++ (MWPhoto *)photoWithURL:(NSURL *)url videoURL:(NSURL *)videoUrl{
+    return [[MWPhoto alloc] initWithURL:url videoURL:videoUrl];
+}
+
 #pragma mark - Init
 
 - (id)initWithImage:(UIImage *)image {
@@ -65,6 +69,14 @@
 		_photoURL = [url copy];
 	}
 	return self;
+}
+
+- (id)initWithURL:(NSURL *)url videoURL:(NSURL *)videoUrl{
+    if (self = [super init]) {
+        _photoURL = [url copy];
+        _videoURL = [videoUrl copy];
+    }
+    return self;
 }
 
 #pragma mark - MWPhoto Protocol Methods

@@ -97,6 +97,7 @@
 		4C6F96F714AF710800F8389A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F96F514AF710800F8389A /* MBProgressHUD.m */; };
 		4C6F97C714AF74E200F8389A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6F97C614AF74E200F8389A /* MessageUI.framework */; };
 		4CB08BA314B1F38700730E9F /* MWPhotoProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB08BA214B1F38700730E9F /* MWPhotoProtocol.h */; };
+		5099EA071A4E4383005EBFF4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5099EA061A4E4383005EBFF4 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,6 +194,7 @@
 		4C6F96F514AF710800F8389A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Libraries/MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		4C6F97C614AF74E200F8389A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4CB08BA214B1F38700730E9F /* MWPhotoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWPhotoProtocol.h; path = Classes/MWPhotoProtocol.h; sourceTree = SOURCE_ROOT; };
+		5099EA061A4E4383005EBFF4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5099EA071A4E4383005EBFF4 /* MediaPlayer.framework in Frameworks */,
 				0E3CF61A18CF321F000EC5F2 /* MapKit.framework in Frameworks */,
 				0E8515CA17FCB05B00FE1EF3 /* AssetsLibrary.framework in Frameworks */,
 				0E8515C417FC780500FE1EF3 /* QuartzCore.framework in Frameworks */,
@@ -279,6 +282,7 @@
 		4C6F96C614AF704100F8389A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5099EA061A4E4383005EBFF4 /* MediaPlayer.framework */,
 				0E3CF61918CF321F000EC5F2 /* MapKit.framework */,
 				0E8515C917FCB05B00FE1EF3 /* AssetsLibrary.framework */,
 				0E8515C317FC780500FE1EF3 /* QuartzCore.framework */,

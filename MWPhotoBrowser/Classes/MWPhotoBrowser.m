@@ -11,6 +11,7 @@
 #import "MWPhotoBrowser.h"
 #import "MWPhotoBrowserPrivate.h"
 #import "SDImageCache.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 #define PADDING                  10
 #define ACTION_SHEET_OLD_ACTIONS 2000
@@ -1663,12 +1664,20 @@
 }
 
 
-- (void)singleTapOnCurrentPhoto {
-    if (_displayPlayButton) {
-        if(self.delegate && [self.delegate respondsToSelector:@selector(photoBrowser:didSelectedPhotoAtIndex:)]) {
-            [self.delegate photoBrowser:self didSelectedPhotoAtIndex:self.currentIndex];
-        }
+- (void)singleTapOnCurrentPhoto { 
+    MWPhoto *photo =  [self photoAtIndex:_currentPageIndex];
+    if (photo.videoURL) {
+        MPMoviePlayerViewController *mpvc = [[MPMoviePlayerViewController alloc] initWithContentURL:photo.videoURL];
+        mpvc.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
+        [[NSNotificationCenter defaultCenter] addObserver:self // the object listening / "observing" to the notification
+                                                 selector:@selector(myMovieFinishedCallback:) // method to call when the notification was pushed
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification // notification the observer should listen to
+                                                   object:mpvc.moviePlayer];
+        [self presentViewController:mpvc animated:YES completion:nil];
+        [[mpvc moviePlayer] play];
     }
 }
-
+- (void)myMovieFinishedCallback:(NSNotification *)notification{
+    NSLog(@"aaa");
+}
 @end
